@@ -37,8 +37,6 @@ services:
       - "80:80"
 
     volumes:
-      # При сборке скопировать созданный конфиг nginx из исходной директории 
-      # в контейнер и сохранить его в директорию /etc/nginx/conf.d/
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
 
       # Контейнер nginx будет работать с данными, хранящиеся в томе static_value, 
@@ -57,3 +55,4 @@ volumes:
   # Новые тома 
   static_value:
   media_value:
+  db_value:
