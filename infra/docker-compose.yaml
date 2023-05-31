@@ -9,7 +9,7 @@ services:
       - ./.env
   web:
     # build: ../api_yamdb/
-    image: yoxyyyy/yamdb_final:latest
+    image: nyles99/yamdb_final
     restart: always
     command: sh -c "cd api_yamdb/ &&
                 gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000"
