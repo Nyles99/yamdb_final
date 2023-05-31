@@ -4,7 +4,6 @@ on: [push]
 
 jobs:
   tests:
-    # «Раннер» — создание изолированного окружения с последней версией Ubuntu 
     runs-on: ubuntu-latest
 
     steps:
@@ -71,6 +70,7 @@ jobs:
             sudo docker compose system prune -f
             sudo docker-compose rm web
             sudo docker pull ${{ secrets.USER }}/yamdb_final
+            rm .env
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
             echo DB_NAME=${{ secrets.DB_NAME }} >> .env
