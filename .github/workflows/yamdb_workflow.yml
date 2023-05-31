@@ -1,4 +1,3 @@
-# .github/workflows/**main.yml**
 name: Django-app workflow
 
 on: [push]
@@ -50,7 +49,7 @@ jobs:
         uses: docker/login-action@v1 
         with:
           username: nyles99 
-          password: Nikita2190
+          password: ${{ secrets.PASSWORD }}
       - name: Push to Docker Hub
         # Пуш образа в Docker Hub 
         uses: docker/build-push-action@v2 
