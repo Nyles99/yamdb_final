@@ -45,7 +45,7 @@ jobs:
         # Запуск скрипта авторизации на Docker Hub
         uses: docker/login-action@v1 
         with:
-          username: nyles99 
+          username: ${{ secrets.USER }} 
           password: ${{ secrets.PASSWORD }}
       - name: Push to Docker Hub
         # Пуш образа в Docker Hub 
