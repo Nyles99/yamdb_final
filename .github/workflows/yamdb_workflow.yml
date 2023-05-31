@@ -66,9 +66,9 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           passphrase: ${{ secrets.PASSPHRASE }}
           script: |
-            sudo docker-compose stop
-            sudo docker compose system prune -f
-            sudo docker-compose rm web
+            sudo docker-comp stop
+            sudo docker comp system prune -f
+            sudo docker-comp rm web
             sudo docker pull ${{ secrets.USER }}/yamdb_final
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
@@ -77,7 +77,7 @@ jobs:
             echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
             echo DB_HOST=${{ secrets.DB_HOST }} >> .env
             echo DB_PORT=${{ secrets.DB_PORT }} >> .env
-            sudo docker-compose up -d
+            sudo docker-comp up -d
 
 
   send_message:
