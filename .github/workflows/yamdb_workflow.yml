@@ -52,11 +52,12 @@ jobs:
           context: ./api_yamdb/
           file: api_yamdb/Dockerfile
           push: true
-          tags: ${{ secrets.USER }}/api_yamdb
+          tags: ${{ secrets.USER }}/yamdb_final:latest
 
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
+    if: github.ref == 'refs/heads/master'
     steps:
       - name: executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
@@ -69,7 +70,7 @@ jobs:
             sudo docker-compose stop
             sudo docker compose system prune -f
             sudo docker-compose rm web
-            sudo docker pull ${{ secrets.USER }}/api_yamdb
+            sudo docker pull ${{ secrets.USER }}/yamdb_final:latest
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
             echo DB_NAME=${{ secrets.DB_NAME }} >> .env
