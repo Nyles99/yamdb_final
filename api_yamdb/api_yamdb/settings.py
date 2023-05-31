@@ -65,7 +65,15 @@ WSGI_APPLICATION = 'api_yamdb.wsgi.application'
 
 # Database
 
-DATABASES = {
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+else:
+    DATABASES = {
         'default': {
             'ENGINE': os.getenv('DB_ENGINE', default='django.db.backends.postgresql'),
             'NAME': os.getenv('DB_NAME', default='postgres'),
@@ -75,7 +83,6 @@ DATABASES = {
             'PORT': os.getenv('DB_PORT', default='5432')
         }
     }
-    
 
 # Password validation
 
