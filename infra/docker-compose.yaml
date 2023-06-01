@@ -7,11 +7,12 @@ services:
     image: postgres:13.0-alpine
     # volume и связанная с ним директория в контейнере
     volumes:
-      - /var/lib/postgresql/data/
+      - db_value:/var/lib/postgresql/data/
     env_file:
       - ./.env
   web:
-    build: ../api_yamdb/
+    # build: ../api_yamdb/
+    image: nyles99/api_yamdb
     restart: always
     volumes:
       - static_value:/app/static/
