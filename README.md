@@ -1,4 +1,4 @@
-![Cтатус workflow](https://github.com/TrofimovAleksey/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+![Cтатус workflow](https://github.com/Nyles99/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 yamdb_final
 example workflow
