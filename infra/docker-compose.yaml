@@ -12,11 +12,10 @@ services:
     env_file:
       - ./.env
   web:
-    build: ../api_yamdb/
+    image: nyles99/yamdb_final
     restart: always
-    volumes:
-      - static_value:/app/static/
-      - media_value:/app/media/
+    command: sh -c "cd api_yamdb/ &&
+                gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000"
     # «зависит от», 
     depends_on:
       - db
