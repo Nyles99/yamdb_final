@@ -4,11 +4,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('YOUR_SECRET_KEY')
+# SECURITY WARNING: keep the secret key used in production secret
+SECRET_KEY = str(os.getenv('YOUR_SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production
-DEBUG = os.getenv('INFO')
+DEBUG = str(os.getenv('INFO'))
 
 ALLOWED_HOSTS = [
     'localhost',
