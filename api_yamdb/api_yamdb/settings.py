@@ -12,7 +12,7 @@ DEBUG = os.getenv('INFO')
 
 ALLOWED_HOSTS = [
     'localhost',
-    '158.160.72.149'
+    '84.201.139.57'
 ]
 
 
