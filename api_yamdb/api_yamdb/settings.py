@@ -7,7 +7,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in productio
 SECRET_KEY = str(os.getenv('YOUR_SECRET_KEY'))
 
-# SECURITY WARNING: don't run with debug turned on in production
+# SECURITY WARNING: don't run with debug turned on in productio
 DEBUG = os.getenv('INFO')
 
 ALLOWED_HOSTS = [
