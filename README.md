@@ -1,7 +1,7 @@
 ![Cтатус workflow](https://github.com/Nyles99/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 yamdb_final
-проект можно увидеть по адресу 84.252.143.24:80/admin
+проект можно увидеть по адресу 158.160.31.38:80/admin
 example workflow
 
 Проект YaMDb собирает отзывы пользователей на произведения. Произведения делятся на категории:«Книги», «Фильмы», «Музыка». Список категорий может быть расширен (например, можно добавить категорию «Изобразительное искусство» или «Ювелирка»). Настроика для приложения Continuous Integration и Continuous Deployment, реализация:
@@ -38,6 +38,6 @@ git clone ...
 scp docker-compose.yaml <пользователь_сервера>@<ip-адрес сервера>:/home/<домашняя папка>
 scp -r /nginx <пользователь_сервера>@<ip-адрес сервера>:/home/<домашняя папка>
 На сервере оставить nginx и установить пакеты docker.io и docker-compose
-84.252.143.24:80/admin
+158.160.31.38:80/admin
 
 https://github.com/nyles99/yamdb_final
