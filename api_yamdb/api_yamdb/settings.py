@@ -79,7 +79,7 @@ DATABASES = {
     }
 }
 
-# Password validation
+# Password validatio
 
 AUTH_PASSWORD_VALIDATORS = [
     {
