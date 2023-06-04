@@ -16,8 +16,6 @@ services:
   web:
     image: nyles99/yamdb_final
     restart: always
-    command: sh -c "cd api_yamdb/ &&
-                gunicorn api_yamdb.wsgi:application --bind 0.0.0.0:8000"
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
@@ -51,6 +49,5 @@ services:
       # Контейнер nginx должен быть запущен после контейнера web
       - web
 volumes:
-  db:
   static_value:
   media_value:
