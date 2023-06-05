@@ -10,10 +10,7 @@ SECRET_KEY = str(os.getenv('YOUR_SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on
 DEBUG = os.getenv('INFO')
 
-ALLOWED_HOSTS = [
-    'localhost',
-    '158.160.15.53'
-]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definitin
